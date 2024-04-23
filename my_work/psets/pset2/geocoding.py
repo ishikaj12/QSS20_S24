@@ -4,7 +4,8 @@ import pandas as pd
 import googlemaps
 
 # load data, access google api key
-gmaps_key = googlemaps.Client(key="AIzaSyBW9-hdr3VEbMaYq3neIGgng6mWAY8F1Nc")
+# removed key to avoid rerunning and paying (only certain number of calls are free)
+gmaps_key = googlemaps.Client(key="")
 data = pd.read_csv('my_work/psets/pset2/jobs.csv')
 df = data.copy()
 df = df[["EMPLOYER_ADDRESS_1", "EMPLOYER_ADDRESS_2",	"EMPLOYER_CITY","EMPLOYER_STATE",	"EMPLOYER_POSTAL_CODE"]]
